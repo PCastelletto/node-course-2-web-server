@@ -21,12 +21,12 @@ app.use( (req, res, next) => {
   next();
 })
 
-app.use((req, res, next) => {
-  res.render('maintenance',{
-    pageTitle: 'Ow!, hay mantenimiento t.t',
-    subTitle:'Hay demasiada tristeza en este mundo'
-  })
-})
+// app.use((req, res, next) => {
+//   res.render('maintenance',{
+//     pageTitle: 'Ow!, hay mantenimiento t.t',
+//     subTitle:'Hay demasiada tristeza en este mundo'
+//   })
+// })
 
 app.use(express.static(__dirname + '/public'));
 
@@ -49,6 +49,12 @@ app.get('/', (req, res) => {
     welcome: 'Le Welcome!!!!!!'
   });
 });
+
+app.get('/projects', (req, res) =>{
+  res.render('projects.hbs',{
+    pageTitle: 'Página de Proyectos'
+  })
+})
 
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
