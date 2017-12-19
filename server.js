@@ -53,8 +53,15 @@ app.get('/', (req, res) => {
 app.get('/projects', (req, res) =>{
   res.render('projects.hbs',{
     pageTitle: 'Página de Proyectos'
-  })
-})
+  } );
+});
+
+app.get('/chat', (req, res) =>{
+  res.send({
+    name: 'Pablo',
+    desc: 'Ow'
+  });
+});
 
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
