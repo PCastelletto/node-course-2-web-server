@@ -58,8 +58,11 @@ app.get('/projects', (req, res) =>{
 
 app.get('/chat', (req, res) =>{
   res.send({
-    name: 'Pablo',
-    desc: 'Ow'
+    speech: 'Chao!',
+    displayText: 'Chao!',
+    data: {
+      info: 'Hola'
+    }
   });
 });
 
